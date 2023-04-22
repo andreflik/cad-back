@@ -9,7 +9,7 @@ use App\Models\Pessoa;
 class PessoasController extends Controller
 {
     public function index(){
-        $pessoa = Pessoa::paginate();
+        $pessoa = Pessoa::all();
 
         return response()->json(['pessoas' => $pessoa], 200);
     }
